@@ -6,7 +6,9 @@
 	Sustituye los múltiplos de 5 por la palabra “Tac”
 	Sustituye los múltiplos de 3 y 5 por la palabra “TicTac”
 
-
+	Nuevos requisitos
+	* Sustituye los múltiplos de 3 o si tiene un 3 por la palabra “Tic”
+	* Sustituye los múltiplos de 5 o si tiene un 5 por la palabra “Tac”
 */
 class TicTacGame {
 
