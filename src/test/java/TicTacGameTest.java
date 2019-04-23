@@ -40,4 +40,23 @@ class TicTacGameTest {
         assertEquals("TICTAC", result);
     }
 
+    @Test
+    void shouldReturnTACWhenTheNumberContains3() {
+        TicTacGame ticTacGame = new TicTacGame();
+
+        final String result = ticTacGame.getNumber(35);
+
+        assertEquals("TIC", result);
+    }
+
+    @Test
+    void shouldReturnTACWhenTheNumberContains5() {
+        TicTacGame ticTacGame = new TicTacGame();
+
+        final String result = ticTacGame.getNumber(35);
+
+        assertEquals("TAC", result);
+    }
+
+
 }
