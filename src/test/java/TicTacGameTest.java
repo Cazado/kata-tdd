@@ -44,7 +44,7 @@ class TicTacGameTest {
     void shouldReturnTACWhenTheNumberContains3() {
         TicTacGame ticTacGame = new TicTacGame();
 
-        final String result = ticTacGame.getNumber(35);
+        final String result = ticTacGame.getNumber(31);
 
         assertEquals("TIC", result);
     }
@@ -53,9 +53,19 @@ class TicTacGameTest {
     void shouldReturnTACWhenTheNumberContains5() {
         TicTacGame ticTacGame = new TicTacGame();
 
-        final String result = ticTacGame.getNumber(35);
+        final String result = ticTacGame.getNumber(56);
 
         assertEquals("TAC", result);
+    }
+
+
+    @Test
+    void shouldReturnTACWhenTheNumberContains5And3() {
+        TicTacGame ticTacGame = new TicTacGame();
+
+        final String result = ticTacGame.getNumber(35);
+
+        assertEquals("TICTAC", result);
     }
 
 
