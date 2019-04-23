@@ -1,4 +1,3 @@
-
 /*
 	Escribir un programa que muestre en pantalla
 
@@ -8,7 +7,6 @@
 	Sustituye los múltiplos de 3 y 5 por la palabra “TicTac”
 */
 class TicTacGame {
-
 
 	String getNumber(int number) {
 		return String.valueOf(number);
