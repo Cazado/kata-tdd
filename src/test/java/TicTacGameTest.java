@@ -13,4 +13,31 @@ class TicTacGameTest {
         assertEquals("2", result);
     }
 
+    @Test
+    void shouldReturnTICWhenTheNumberIsDivisibleBy3() {
+        TicTacGame ticTacGame = new TicTacGame();
+
+        final String result = ticTacGame.getNumber(3);
+
+        assertEquals("TIC", result);
+    }
+
+    @Test
+    void shouldReturnTACWhenTheNumberIsDivisibleBy5() {
+        TicTacGame ticTacGame = new TicTacGame();
+
+        final String result = ticTacGame.getNumber(5);
+
+        assertEquals("TAC", result);
+    }
+
+    @Test
+    void shouldReturnTACWhenTheNumberIsDivisibleBy5And3() {
+        TicTacGame ticTacGame = new TicTacGame();
+
+        final String result = ticTacGame.getNumber(15);
+
+        assertEquals("TICTAC", result);
+    }
+
 }

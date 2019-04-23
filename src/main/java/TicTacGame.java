@@ -9,10 +9,17 @@
 class TicTacGame {
 
 	String getNumber(int number) {
-
-
-
-
-		return String.valueOf(number);
+		if (number % 3 == 0 && number % 5 == 0){
+			return "TICTAC";
+		}
+		else if (number % 3 == 0){
+			return "TIC";
+		}
+		else if (number % 5 == 0){
+			return "TAC";
+		}
+		else {
+			return String.valueOf(number);
+		}
 	}
 }
