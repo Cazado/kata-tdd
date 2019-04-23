@@ -1,17 +1,25 @@
 language: java
 jdk:
   - oraclejdk8
+
 env:
   global:
-    CC_TEST_REPORTER_ID=604bfc1f5c5720bb525c572bfa37a3bee177a444e51aae74c92c438b5ebaa01f
+    - CC_TEST_REPORTER_ID=b6d60b4037822f1a86829a709436583903c3049a9331360d7e5828b43442a3d4
+    - JACOCO_SOURCE_PATH=src/main/java
 
 cache:
   directories:
     - $HOME/.m2
 
-before_script:
+before_install:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+
+script:
+  - mvn clean test
+
 after_script:
-  - ./cc-test-reporter after-build -t jacoco --exit-code $TRAVIS_TEST_RESULT
+  - ./cc-test-reporter format-coverage -d -t jacoco ./target/site/jacoco/jacoco.xml
+  - ./cc-test-reporter upload-coverage
+
