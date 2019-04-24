@@ -12,6 +12,8 @@
 */
 class TicTacGame {
 
+	// HOLa
+
 	String getNumber(int number) {
 		if (number % 3 == 0 && number % 5 == 0 || String.valueOf(number).contains("5") && String.valueOf(number).contains("3")){
 			return "TICTAC";
